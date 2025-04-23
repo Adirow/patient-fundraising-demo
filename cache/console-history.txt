@@ -1,0 +1,128 @@
+console.log("3. Fund traceability - Every donation and expense is clearly recorded");
+console.log("2. Transparency - All transactions are recorded on the blockchain and viewable anytime");
+console.log("1. Risk of fund misuse - Funds can only be paid to verified medical providers");
+console.log("\nDemo completed! This demonstrates how blockchain solves key problems in medical fundraising:");
+}
+  console.log("-------------------");
+  console.log(`- Time: ${new Date(transactions[i].timestamp.toNumber() * 1000).toLocaleString()}`);
+  console.log(`- Purpose: ${transactions[i].purpose}`);
+  console.log(`- Amount: ${ethers.utils.formatEther(transactions[i].amount)} ETH`);
+  console.log(`- To: ${transactions[i].to}`);
+  console.log(`- From: ${transactions[i].from}`);
+  console.log(`Transaction ${i+1}:`);
+for (let i = 0; i < transactions.length; i++) {
+console.log("\nTransaction Records:");
+const transactions = await fundraising.getAllTransactions();
+// 10. View all transaction records
+console.log("Patient funds after payment:", ethers.utils.formatEther(afterPaymentFunds), "ETH");
+const afterPaymentFunds = await fundraising.patientFunds(1);
+// 9. Check patient funds after payment
+console.log("Patient has paid 1 ETH to hospital for initial consultation");
+);
+  "Initial consultation fee"
+  ethers.utils.parseEther("1"), 
+  hospital.address, 
+  1, 
+await fundraising.connect(patient).payVendor(
+// 8. Patient pays the hospital
+console.log("Patient funds after donation:", ethers.utils.formatEther(afterDonationFunds), "ETH");
+const afterDonationFunds = await fundraising.patientFunds(1);
+// 7. Check patient funds after donation
+console.log("Donor has donated 2 ETH to patient");
+);
+  { value: ethers.utils.parseEther("2") }
+  "Get well soon!", 
+  1, 
+await fundraising.connect(donor).donateToPatient(
+// 6. Donor makes a donation to patient
+console.log("Initial patient funds:", ethers.utils.formatEther(initialPatientFunds), "ETH");
+const initialPatientFunds = await fundraising.patientFunds(1);
+// 5. Check initial patient funds
+console.log("Added medical vendor:", hospital.address);
+await fundraising.addTestVendor(hospital.address);
+// 4. Add a test hospital
+console.log("Added patient: John Smith, needs 5 ETH for Heart Surgery");
+);
+  ethers.utils.parseEther("5")
+  "Heart Surgery", 
+  "John Smith", 
+  patient.address, 
+await fundraising.addTestPatient(
+// 3. Add a test patient
+console.log("Contract deployed at address:", fundraising.address);
+await fundraising.deployed();
+const fundraising = await PatientFundraising.deploy();
+const PatientFundraising = await ethers.getContractFactory("PatientFundraising");
+// 2. Deploy the contract
+const hospital = accounts[3];
+const donor = accounts[2];
+const patient = accounts[1];
+const admin = accounts[0];
+const accounts = await ethers.getSigners();
+// 1. Get accounts
+// Run these commands in the Hardhat console to demonstrate the functionality
+.load console-demo.js
+console.log("3. Fund traceability - Every donation and expense is clearly recorded");
+console.log("2. Transparency - All transactions are recorded on the blockchain and viewable anytime");
+console.log("1. Risk of fund misuse - Funds can only be paid to verified medical providers");
+console.log("\nDemo completed! This demonstrates how blockchain solves key problems in medical fundraising:");
+}
+  console.log("-------------------");
+  console.log(`- Time: ${new Date(transactions[i].timestamp.toNumber() * 1000).toLocaleString()}`);
+  console.log(`- Purpose: ${transactions[i].purpose}`);
+  console.log(`- Amount: ${ethers.utils.formatEther(transactions[i].amount)} ETH`);
+  console.log(`- To: ${transactions[i].to}`);
+  console.log(`- From: ${transactions[i].from}`);
+  console.log(`Transaction ${i+1}:`);
+for (let i = 0; i < transactions.length; i++) {
+console.log("\nTransaction Records:");
+const transactions = await fundraising.getAllTransactions();
+// 10. View all transaction records
+console.log("Patient funds after payment:", ethers.utils.formatEther(afterPaymentFunds), "ETH");
+const afterPaymentFunds = await fundraising.patientFunds(1);
+// 9. Check patient funds after payment
+console.log("Patient has paid 1 ETH to hospital for initial consultation");
+);
+  "Initial consultation fee"
+  ethers.utils.parseEther("1"), 
+  hospital.address, 
+  1, 
+await fundraising.connect(patient).payVendor(
+// 8. Patient pays the hospital
+console.log("Patient funds after donation:", ethers.utils.formatEther(afterDonationFunds), "ETH");
+const afterDonationFunds = await fundraising.patientFunds(1);
+// 7. Check patient funds after donation
+console.log("Donor has donated 2 ETH to patient");
+);
+  { value: ethers.utils.parseEther("2") }
+  "Get well soon!", 
+  1, 
+await fundraising.connect(donor).donateToPatient(
+// 6. Donor makes a donation to patient
+console.log("Initial patient funds:", ethers.utils.formatEther(initialPatientFunds), "ETH");
+const initialPatientFunds = await fundraising.patientFunds(1);
+// 5. Check initial patient funds
+console.log("Added medical vendor:", hospital.address);
+await fundraising.addTestVendor(hospital.address);
+// 4. Add a test hospital
+console.log("Added patient: John Smith, needs 5 ETH for Heart Surgery");
+);
+  ethers.utils.parseEther("5")
+  "Heart Surgery", 
+  "John Smith", 
+  patient.address, 
+await fundraising.addTestPatient(
+// 3. Add a test patient
+console.log("Contract deployed at address:", fundraising.address);
+await fundraising.deployed();
+const fundraising = await PatientFundraising.deploy();
+const PatientFundraising = await ethers.getContractFactory("PatientFundraising");
+// 2. Deploy the contract
+const hospital = accounts[3];
+const donor = accounts[2];
+const patient = accounts[1];
+const admin = accounts[0];
+const accounts = await ethers.getSigners();
+// 1. Get accounts
+// Run these commands in the Hardhat console to demonstrate the functionality
+.load console-demo.js
