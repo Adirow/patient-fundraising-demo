@@ -23,19 +23,18 @@ contract PatientFundraising {
         string purpose;
     }
 
-    // Platform administrator
     address public admin;
 
     // Mapping of patient IDs to Patient structs
     mapping(uint256 => Patient) public patients;
 
-    // Mapping of medical vendor addresses to verification status
+
     mapping(address => bool) public verifiedVendors;
 
-    // Patient funds available for spending
+
     mapping(uint256 => uint256) public patientFunds;
 
-    // All transactions recorded on-chain
+
     Transaction[] public transactions;
 
     // Patient counter
@@ -71,11 +70,11 @@ contract PatientFundraising {
         require(patients[_patientId].isVerified, "Patient is not verified");
         require(msg.value > 0, "Donation amount must be greater than 0");
 
-        // Update patient's raised amount and available funds
+
         patients[_patientId].raisedAmount += msg.value;
         patientFunds[_patientId] += msg.value;
 
-        // Record the transaction
+
         transactions.push(
             Transaction({
                 from: msg.sender,
@@ -116,7 +115,7 @@ contract PatientFundraising {
         // Update available funds
         patientFunds[_patientId] -= _amount;
 
-        // Pay the vendor
+
         _vendorAddress.transfer(_amount);
 
         // Record the transaction
@@ -151,12 +150,12 @@ contract PatientFundraising {
         });
     }
 
-    // Helper function to add a test vendor (for demo purposes)
+
     function addTestVendor(address _vendorAddress) public {
         verifiedVendors[_vendorAddress] = true;
     }
 
-    // Helper function to get all transactions (for demo purposes)
+
     function getAllTransactions() public view returns (Transaction[] memory) {
         return transactions;
     }
