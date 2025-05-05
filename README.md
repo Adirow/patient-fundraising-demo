@@ -9,3 +9,22 @@ Traditional fundraising platforms suffer from a lack of transparency, high trans
 - **Verified patient registration**
 - **Traceable donor transactions**
 - **Controlled fund release to verified medical vendors only**
+##  Features
+
+-  **Smart Contract Enforcement**: Only approved vendors can receive payments.
+-  **Full Transaction Transparency**: Every donation and fund transfer is recorded on-chain.
+-  **Verified Patient Registry**: Only approved patients can raise funds.
+-  **Purpose-Linked Spending**: Each vendor payment includes a spending purpose.
+
+##  Technologies
+
+- **Solidity** (Ethereum Smart Contracts)
+- **Hardhat** for deployment/testing
+
+##  Smart Contract Key Functions
+
+| Function | Description |
+|---------|-------------|
+| `donateToPatient(patientId)` | Public function allowing donations to a verified patient |
+| `payVendor(patientId, vendor, amount, purpose)` | Admin-only function to release funds to a verified hospital/pharmacy |
+| `verifyPatient(address, name, condition, targetAmount)` | Admin function to onboard new patients |
