@@ -39,4 +39,5 @@ Then, open another terminal, under the same folder, use the following command to
 
 You may need to set system settings to run the code. On Mac, if your first attempt throws an error, you may need to go to System Settings -> Privacy & Security, and click "Allow Anyway" when you see something like "edr.darwin-arm64.node was blocked...".
 
-You may also interact with the program by lanuching a console. 
+You may also interact with the program by lanuching a console.
+`npx hardhat console --network localhost`
